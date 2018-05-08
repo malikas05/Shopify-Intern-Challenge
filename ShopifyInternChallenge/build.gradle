@@ -1,0 +1,47 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.0.1'
+        classpath 'com.jakewharton:butterknife-gradle-plugin:8.4.0'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+ext.versions = [
+        androidSupport: "26.1.0",
+        constraintLayout: "1.1.0",
+        butterKnife: "8.8.1"
+]
+
+ext.support = [
+        appcompat7: "com.android.support:appcompat-v7:$versions.androidSupport",
+        support4: "com.android.support:support-v4:$versions.androidSupport",
+        design: "com.android.support:design:$versions.androidSupport",
+        recyclerview: "com.android.support:recyclerview-v7:$versions.androidSupport",
+        annotations: "com.android.support:support-annotations:$versions.androidSupport",
+        constraintLayout: "com.android.support.constraint:constraint-layout:$versions.constraintLayout"
+]
+
+ext.jakewharton = [
+        butterknife: "com.jakewharton:butterknife:$versions.butterKnife",
+        butterknifeCompiler: "com.jakewharton:butterknife-compiler:$versions.butterKnife"
+]

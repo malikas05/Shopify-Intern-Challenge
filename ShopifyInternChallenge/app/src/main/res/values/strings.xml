@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Shopify Intern Challenge</string>
+    <string name="loading">Please wait while data is loading.</string>
+</resources>
